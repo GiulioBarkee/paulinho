@@ -5,11 +5,20 @@ import Bg from '../components/Bg.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<Bg></Bg>
+	<Bg>
+		<div>
+			<h2>PAUL BARCHI</h2>
+			<a href="/src/pages/Sopresa"><img class="paul"  src="/admin/paulinho.jpg" alt=""></a>
+		</div>
+	</Bg>
 	
 </Layout>
 
 <style>
+
+    h2{font-size: 5rem; color: rgb(255, 255, 255); text-align: center; margin-top: 25px }
+    .paul{height: 354px;  width: 100%; margin-top: -38px; object-fit: cover;}
+
 	main {
 		margin: auto;
 		padding: 1rem;
