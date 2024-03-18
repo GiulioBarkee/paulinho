@@ -9,8 +9,8 @@ local_backend: true
 
 # logo_url: 
 
-media_folder: /public/
-public_folder: /
+media_folder: "/public/assets/uploads"
+public_folder: "public/assets/uploads"
 
 show_preview_links: false
 search: false
@@ -19,37 +19,38 @@ editor:
     preview: false
     
 collections:
-  - name: settings
-    label: Settings
-    description: Websites's settings.
-    files:
-      - label: Settings
-        name: settings
-        file: src/content/settings/settings.json
-        media_folder: /src/assets
-        public_folder: '@assets/'
-        fields:
-          - {name: logo, widget: image }
-          - {name: secondaryColor, widget: color }
-          - {name: title, widget: text }
-          - {name: header, widget: list, fields: [
-            {name: title, widget: string},
-            {name: url, widget: string}
-          ] }
-          - {name: contacts, widget: object, collapsed: true, fields: [
-            {name: hero, widget: text },
-            {name: list, widget: list, fields: [
-              {name: title, widget: text},
-              {name: url, widget: string}
-            ]}
-          ]}
+  # - name: settings
+  #   label: Settings
+  #   description: Websites's settings.
+  #   files:
+  #     - label: Settings
+  #       name: settings
+  #       file: src/content/settings/settings.json
+  #       media_folder: /src/assets
+  #       public_folder: '@assets/'
+  #       fields:
+  #         - {name: logo, widget: image }
+  #         - {name: secondaryColor, widget: color }
+  #         - {name: title, widget: text }
+  #         - {name: header, widget: list, fields: [
+  #           {name: title, widget: string},
+  #           {name: url, widget: string}
+  #         ] }
+  #         - {name: contacts, widget: object, collapsed: true, fields: [
+  #           {name: hero, widget: text },
+  #           {name: list, widget: list, fields: [
+  #             {name: title, widget: text},
+  #             {name: url, widget: string}
+  #           ]}
+  #         ]}
   - name: projects
     label: Projects
     # description: xyy design projects.
-    folder: 'src/content/projects'
-    create: true
-    media_folder: /src/assets/
-    public_folder: '@assets/'
+    folder: 'src/assets'
+    create: true #permette alle persone di creare post dal cms
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # media_folder: "/public/assets/uploads"
+    # public_folder: "/assets/uploads"
     fields:
       - {name: title, widget: string}
       - {name: subtitle, widget: text}
