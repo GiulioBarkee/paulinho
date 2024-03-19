@@ -50,8 +50,8 @@ collections:
     folder: '/assets/uploads'
     create: true #permette alle persone di creare post dal cms
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    media_folder: "/public/assets/uploads"
-    public_folder: "/assets/uploads"
+    media_folder: '/public/assets/uploads'
+    public_folder: '/assets/uploads'
     fields:
       - {name: title, widget: string}
       - {name: subtitle, widget: text}
