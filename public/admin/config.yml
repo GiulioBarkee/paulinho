@@ -43,6 +43,7 @@ collections:
               {name: url, widget: string}
             ]}
           ]}
+          
   - name: projects
     label: Projects
     # description: xyy design projects.
