@@ -47,7 +47,7 @@ collections:
   - name: projects
     label: Projects
     # description: xyy design projects.
-    folder: '/assets/uploads'
+    folder: 'src/content/projects'
     create: true #permette alle persone di creare post dal cms
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: '/public/assets/uploads'
