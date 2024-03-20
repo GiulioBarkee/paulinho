@@ -1,10 +1,24 @@
+---
+import { getCollection } from "astro:content"
+import settings from "../content/settings/settings.json"
+
+const list = await getCollection("projects");
+console.log(settings.title)
+---
 <div>
     <h2>PAUL</h2>
 <img class="paul"  src="/assets/uploads/paulinho.jpg" alt="">
-    
+    {
+        list.map(element => <div class="project">
+            <h1>{element.data.title}</h1>
+            <p>{element.data.subtitle}</p>
+            <img src={element.data.image} alt={element.data.title}/>
+            </div>)
+    }
 </div>
 
 <style>
     h2{font-size: 5rem; color: rgb(255, 255, 255); text-align: center; margin-top: 25px }
     .paul{height: 354px;  width: 100%; margin-top: -38px; object-fit: cover;}
+    .project{margin: 0 auto;}
 </style>
