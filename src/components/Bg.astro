@@ -2,14 +2,14 @@
 import { getCollection } from "astro:content"
 import settings from "../content/settings/settings.json"
 
-const { frontmatter } = Astro.props;
-title : Gvng
+// const { frontmatter } = Astro.props;
+
 
 const list = await getCollection("projects");
 console.log(settings.title)
 ---
 <div class="container">
-    <h2>{frontmatter.title}</h2>
+    <h2>{settings.title}</h2>
     <div>
 <img class="paul"  src="/assets/uploads/paulinho.jpg" alt="">
     {
