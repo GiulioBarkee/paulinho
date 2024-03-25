@@ -1,7 +1,7 @@
 {
-  "logo": "@assets/alex.jpg",
-  "secondaryColor": "#d93434",
-  "title": "ff",
+  "logo": "../src/assets/logo-provatubo.png",
+  "secondaryColor": "#ffffff",
+  "title": "Paul",
   "contacts": {
     "hero": "fghh"
   }

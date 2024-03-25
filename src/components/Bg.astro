@@ -8,6 +8,8 @@ import settings from "../content/settings/settings.json"
 const list = await getCollection("projects");
 console.log(settings.title)
 ---
+
+<a class="logo" href=""><img src={settings.logo} alt="Logo" /></a>
 <div class="container">
     <h2>{settings.title}</h2>
     <div>
@@ -24,6 +26,7 @@ console.log(settings.title)
 </div>
 
 <style>
+    .logo img{position: fixed; top: 10; left: 10; height: 78px;}
     h2{font-size: 5rem; color: rgb(255, 255, 255); text-align: center; margin-top: 25px }
     .paul{height: 354px;  width: 100%; margin-top: -38px; object-fit: cover;}
     .project img{margin: 0 auto; width: 100%; object-fit: cover;}

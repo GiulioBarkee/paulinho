@@ -26,8 +26,8 @@ collections:
       - label: Settings
         name: settings
         file: src/content/settings/settings.json
-        media_folder: /src/assets
-        public_folder: '@assets/'
+        media_folder: "/src/assets"
+        public_folder: "/src/assets"
         fields:
           - {name: logo, widget: image }
           - {name: secondaryColor, widget: color }
