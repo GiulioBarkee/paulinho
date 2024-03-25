@@ -1,5 +1,5 @@
 {
-  "logo": "../src/assets/logo-provatubo.png",
+  "logo": "/src/assets/logo-provatubo.png",
   "secondaryColor": "#ffffff",
   "title": "Paul",
   "contacts": {
