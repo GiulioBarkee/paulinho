@@ -2,11 +2,14 @@
 import { getCollection } from "astro:content"
 import settings from "../content/settings/settings.json"
 
+const { frontmatter } = Astro.props;
+title : Gvng
+
 const list = await getCollection("projects");
-// console.log(settings.title)
+console.log(settings.title)
 ---
 <div class="container">
-    <h2>PAUL</h2>
+    <h2>{frontmatter.title}</h2>
     <div>
 <img class="paul"  src="/assets/uploads/paulinho.jpg" alt="">
     {
@@ -25,6 +28,7 @@ const list = await getCollection("projects");
     .paul{height: 354px;  width: 100%; margin-top: -38px; object-fit: cover;}
     .project img{margin: 0 auto; width: 100%; object-fit: cover;}
     .container{width: 30%; display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 0 auto;}
+    
 </style>
 
 <script>
